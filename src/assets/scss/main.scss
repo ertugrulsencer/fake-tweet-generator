@@ -4,6 +4,8 @@
 }
 body {
   display: grid;
+  background: #020202;
+  color: #fefefe;
   grid-template-columns: minmax(320px, 350px);
   grid-template-rows: 50px 1fr;
   main {
