@@ -5,7 +5,9 @@
       <li>Türkçe</li>
       <li>English</li>
     </ul>
-    <a href="javascript:return false;" class="share">Paylaş</a>
+    <button v-if="isShareSupport" type="button" class="share" @click="share">
+      Paylaş
+    </button>
   </header>
 </template>
 
@@ -14,7 +16,25 @@ export default {
   props: {
     langList: {
       type: Array,
-      required: true,
+      required: false,
+    },
+  },
+  data() {
+    return {
+      isShareSupport: navigator.share !== undefined,
+    };
+  },
+  methods: {
+    share() {
+      if (navigator.share) {
+        navigator.share({
+          title: "Fake Tweet Generator",
+          text: "Free fake tweet generate and download",
+          url: location.href,
+        });
+      } else {
+        alert("Tarayıcınız paylaşım özelliğini desteklemiyor.");
+      }
     },
   },
 };
