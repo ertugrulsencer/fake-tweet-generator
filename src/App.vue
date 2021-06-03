@@ -13,3 +13,11 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
