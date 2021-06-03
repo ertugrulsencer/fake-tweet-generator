@@ -1,15 +1,19 @@
 <template>
-  <main>
+  <div class="wrapper">
     <Header />
-  </main>
+    <Settings />
+    <main></main>
+  </div>
 </template>
 
 <script>
-import Header from "./components/Header";
+import Header from "./components/shared/Header";
+import SideBar from "@/components/shared/SideBar";
 export default {
   name: "App",
   components: {
     Header,
+    Settings: SideBar,
   },
 };
 </script>
