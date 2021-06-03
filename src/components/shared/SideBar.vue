@@ -1,9 +1,15 @@
 <template>
-  <aside class="side-bar">Side Bar</aside>
+  <aside class="side-bar">{{ getLang("aside_header") }}</aside>
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    getLang() {
+      return (text) => this.$store.getters.getLang(text);
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

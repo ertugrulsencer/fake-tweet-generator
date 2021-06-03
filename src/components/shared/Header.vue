@@ -1,15 +1,25 @@
 <template>
   <header class="header">
     <div class="container">
-      <strong class="logo">Fake Tweet Generator</strong>
+      <strong class="logo">{{ getLang("title") }}</strong>
       <ul class="languages">
         <li>
-          <a :class="{ active: true }" @click.prevent href="#turkish">Türkçe</a>
+          <a
+            :class="{ active: $store.state.app_lang == 'turkish' }"
+            @click.prevent="changeLang('turkish')"
+            href="#turkish"
+          >
+            Türkçe
+          </a>
         </li>
         <li>
-          <a :class="{ active: false }" @click.prevent href="#english"
-            >English</a
+          <a
+            :class="{ active: $store.state.app_lang == 'english' }"
+            @click.prevent="changeLang('english')"
+            href="#english"
           >
+            English
+          </a>
         </li>
       </ul>
       <button v-if="isShareSupport" type="button" class="share" @click="share">
@@ -20,19 +30,15 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
-  props: {
-    langList: {
-      type: Array,
-      required: false,
-    },
-  },
   data() {
     return {
       isShareSupport: navigator.share !== undefined,
     };
   },
   methods: {
+    ...mapMutations(["changeLang"]),
     share() {
       if (navigator.share) {
         navigator.share({
@@ -43,6 +49,11 @@ export default {
       } else {
         alert("Tarayıcınız paylaşım özelliğini desteklemiyor.");
       }
+    },
+  },
+  computed: {
+    getLang() {
+      return (lang) => this.$store.getters.getLang(lang);
     },
   },
 };
