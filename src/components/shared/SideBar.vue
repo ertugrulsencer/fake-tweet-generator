@@ -62,7 +62,7 @@ aside {
     align-items: flex-start;
     justify-content: flex-start;
     fieldset {
-      border: 2px solid #a9a9a9;
+      border: 2px solid #ffffff22;
       border-radius: 4px;
       padding: 12px;
       width: 100%;
