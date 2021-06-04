@@ -75,7 +75,7 @@ header.header {
     align-items: center;
     justify-content: space-between;
     .logo {
-      -webkit-text-stroke: 0.8px #f8f8f8;
+      -webkit-text-stroke: 0.8px rgb(29, 161, 242);
       color: transparent;
       letter-spacing: 1px;
       font-weight: 700;
@@ -94,7 +94,8 @@ header.header {
         background: #141414;
         padding: 8px 12px;
         color: #959595;
-        font-size: 0.85rem;
+        font-weight: 500;
+        font-size: 0.8rem;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -105,7 +106,7 @@ header.header {
         }
         &.active {
           background: #222;
-          color: #f7f7f7;
+          color: rgb(29, 161, 242);
         }
       }
     }

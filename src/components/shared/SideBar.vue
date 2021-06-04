@@ -72,6 +72,10 @@ aside {
         margin-top: 12px;
         width: 100%;
         transition: border-color 250ms ease-in-out, background 250ms ease-in-out;
+        &::placeholder {
+          color: rgb(29, 161, 242);
+          font-weight: 500;
+        }
         &:not([type="file"]) {
           padding: 6px 8px;
           font-size: 0.9rem;
@@ -84,8 +88,8 @@ aside {
           border-color: #646464;
         }
         &:focus {
-          background: rgba(50, 50, 50, 0.1);
-          border-color: #a9a9a9;
+          background: rgba(29, 161, 242, 0.1);
+          border-color: rgb(29, 161, 242);
         }
       }
       textarea {
