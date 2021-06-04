@@ -10,7 +10,11 @@
       </fieldset>
       <fieldset>
         <strong>{{ getLang("settings_user_name") }}</strong>
-        <input type="text" :placeholder="getLang('user_name_placeholder')" />
+        <input
+          autofocus
+          type="text"
+          :placeholder="getLang('user_name_placeholder')"
+        />
       </fieldset>
       <fieldset>
         <strong> {{ getLang("settings_tweet_header") }} </strong>
