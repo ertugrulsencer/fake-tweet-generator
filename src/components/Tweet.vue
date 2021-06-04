@@ -1,9 +1,9 @@
 <template>
-  <div class="tweet">Tweet</div>
+  <article class="tweet">Tweet</article>
 </template>
 
 <script>
 export default {};
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>

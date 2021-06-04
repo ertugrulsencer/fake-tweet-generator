@@ -2,18 +2,22 @@
   <div class="wrapper">
     <Header />
     <Settings />
-    <main></main>
+    <main>
+      <Tweet />
+    </main>
   </div>
 </template>
 
 <script>
 import Header from "./components/shared/Header";
 import SideBar from "@/components/shared/SideBar";
+import Tweet from "./components/Tweet";
 export default {
   name: "App",
   components: {
     Header,
     Settings: SideBar,
+    Tweet,
   },
 };
 </script>
