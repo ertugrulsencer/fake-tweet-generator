@@ -54,7 +54,6 @@ aside {
     padding: 20px 18px;
     color: #ffffff;
     opacity: 0.8;
-    font-size: 1.1rem;
   }
   form {
     padding: 0 18px;
